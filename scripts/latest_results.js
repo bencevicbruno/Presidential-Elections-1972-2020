@@ -23,6 +23,7 @@ function setup_LatestResult() {
         return c + (d - c) / (b - a) * (t - a)
     }
 
+    // State indexes don't match in the geoJSON file, so they have to be converted first before being used.
     function getStateIndex(stateName) {
         if (stateName === "Washington DC") {
             stateName = "District of Columbia"
@@ -58,6 +59,7 @@ function setup_LatestResult() {
             .attr("transform", "translate(" + pieRadius + ", " + pieRadius + ")")
     }
 
+    // Clicking on a state alters the barchart without animations.
     function onStateClicked(d, i) {
         let clickToShowDiv = document.getElementById("click_to_show");
         if (clickToShowDiv) {
@@ -90,6 +92,7 @@ function setup_LatestResult() {
         titles.innerHTML = "<h4>Republicans: " + reps + " %</h4>" + "<h4>Democrats: " + demos + " %</h4>" + "<h4>Others: " + others + " %</h4>";
     }
 
+    // The Map is set up in the same way the USA state overview does it.
     function setupMap(data, csv) {
         mapSVG = d3.select("#map_usa")
         mapWidth = mapSVG.style("width")
@@ -127,6 +130,7 @@ function setup_LatestResult() {
             .on("click", onStateClicked)
     }
 
+    // Huge helper: https://d3-graph-gallery.com/pie.html
     function setupPiechart(data) {
         Object.keys(data).forEach(key => {
             let rep = parseInt(data[key]["repVotes"])
