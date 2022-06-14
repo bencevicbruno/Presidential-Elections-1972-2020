@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/map_usa.css">
+    <link rel="stylesheet" href="/styles/candidates_popularity.css">
+    <link rel="stylesheet" href="/styles/votes_per_state_barchart.css">
+    <link rel="stylesheet" href="/styles/latest_results.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <title>Presidential Elections</title>
+
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+
+</head>
+
+<body>
+    <aside></aside>
+
+    <main>
+        <h1>Presidential elections in USA (1972-2020)</h1>
+
+        <section id="general">
+            <h2>General</h2>
+
+            <div id="map_usa_tooltip" class="tooltip"></div>
+            <svg id="map_usa"></svg>
+
+            <div class="paragraphs">
+                <p>
+                    The election of the president and the vice president of the United States is
+                    an indirect election in which citizens of the United States who are registered
+                    to vote in one of the fifty U.S. states or in Washington, D.C., cast ballots not
+                    directly for those offices, but instead for members of the Electoral College.
+                    These electors then cast direct votes, known as electoral votes, for president,
+                    and for vice president.
+                </p>
+                <br>
+                <p>
+                    The candidate who receives an absolute majority of electoral
+                    votes (at least 270 out of 538, since the Twenty-Third Amendment granted voting rights
+                    to citizens of D.C.) is then elected to that office. If no candidate receives an absolute
+                    majority of the votes for president, the House of Representatives elects the president;
+                    likewise if no one receives an absolute majority of the votes for vice president,
+                    then the Senate elects the vice president.
+                </p>
+            </div>
+        </section>
+
+        <section id="candidates_popularity">
+            <h2>Candidates Popularity (in Millions)</h2>
+
+            <svg id="candidates_popularity_linechart"></svg>
+
+            <div class="paragraphs">
+                <p>
+                    Over the last 50 years, two parties that dominated elections with electoral votes were Republicans and Democrats. 
+                    Republicans, usually associated with the red color, are a left-wing party, favoring a republic over a monarchy and primarly 
+                    liberal. Democrats on the other hand are right-wing conservatives whom are favoured by the upper-class of USA.
+                </p>
+                <br>
+                <p>
+                    The lines graph above shows that the interest in the Democratic party was always bigger than that in the Republic party, 
+                    although the difference was never that big.
+                </p>
+            </div>
+        </section>
+
+        <section id="votes_per_state">
+            <h2>Election Results per State</h2>
+
+            <div id="votes_per_state_year_slider_container">
+                1972
+                <input type="range" min="1972" max="2020" value="2020" step="4" class="slider"
+                    id="votes_per_state_year_slider">
+                2020
+            </div>
+
+            <div id="votes_per_state_tooltip" class="tooltip"></div>
+
+            <div id="votes_per_state_current_year_container">
+                Current year: 2000
+            </div>
+
+            <svg id="votes_per_state_barchart"></svg>
+
+            <div class="paragraphs">
+                <p>
+                    It is appereant that Democrats dominated the conservatives. Most of Democratic states in the USA are among the wealthiest. 
+                    The barchart above shows clearly that most globaly popular states have always been leaning to the right.
+                </p>
+            </div>
+        </section>
+
+        <section id="latest_results_per_state">
+            <h2>2020 Election Results (per State)</h2>
+
+            <div id="latest_results_per_state_container">
+                <svg id="latest_results_map"></svg>
+
+                <div id="latest_results_data_container">
+                    <div id="click_to_show">Click on a State to show latest Election Results.</div>
+                    <h3 id="latest_results_data_country">Country name</h3>
+
+                    <svg id="latest_result_data_piechart"></svg>
+
+                    <div class="results" id="latest_results_table">
+                        <h4>Republicans: 0</h4>
+                        <h4>Democrats: 0</h4>
+                        <h4>Other: 0</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About</h2>
+            
+            <div class="paragraphs">
+                <p>
+                    <b>Presidential elections in USA (1920-2020)</b> was made as a project for the mandatory 
+                    course <i>Data Visualization</i> at the Faculty of Electrical Engineering, Computer 
+                    Science and Information Technology in Osijek.
+                </p>
+
+                <h3>Sources</h3>
+
+                <p>
+                    <ul>
+                        <li>elections data: <a href="https://www.presidency.ucsb.edu/statistics/elections/2020">The American Pesidency Project</a></li>
+                        <li>linechart, barchart and piechart ideas: <a href="https://d3-graph-gallery.com/">The D3.js Graph Gallery</a></li>
+                        <li>inspiration for USA map visuals: <a href="http://bl.ocks.org/michellechandra/0b2ce4923dc9b5809922">Popular Blocks</a></li>
+                        <li>official materials provided on Merlin</li>
+                    </ul>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <aside></aside>
+
+    <script src="/scripts/map_usa.js"></script>
+    <script src="/scripts/candidates_popularity.js"></script>
+    <script src="/scripts/votes_per_state_barchart.js"></script>
+    <script src="/scripts/latest_results.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+#votes_per_state_barchart {
+    width: 100%;
+    background-color: #EEEEEE;
+    border-radius: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    aspect-ratio: 16/9;
+}
+
+#votes_per_state_year_slider_container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#votes_per_state_current_year_container {
+    width: 100%;
+    text-align: center;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+#votes_per_state_year_slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;  
+    background: #EEEEEE;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+
+    margin-left: 10px;
+    margin-right: 10px;
+  }

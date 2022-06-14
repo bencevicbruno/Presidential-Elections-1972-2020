@@ -1,0 +1,27 @@
+#candidates_popularity_linechart {
+    width: 100%;
+    background-color: #EEEEEE;
+    border-radius: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    aspect-ratio: 16/9;
+}
+
+#candidates_popularity_linechart .x_axis,
+#candidates_popularity_linechart .y_axis {
+    stroke-width: 1.5px;
+}
+
+#candidates_popularity_linechart .line {
+    fill: none;
+    stroke-width: 3px;
+}
+
+#candidates_popularity_linechart .democrats {
+    stroke: blue;
+}
+
+#candidates_popularity_linechart .republicans {
+    stroke: red;
+}

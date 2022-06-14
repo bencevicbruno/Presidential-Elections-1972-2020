@@ -1,0 +1,116 @@
+#latest_results_per_state_container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+/* SVG */
+
+#latest_results_map {
+    width: 70%;
+    aspect-ratio: 4/3;
+
+    background-color: lightblue;
+    border-radius: 15px;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.latest_results_map_state {
+    fill: none;
+    stroke: #a9a9a9;
+    stroke-width: 1;
+}
+
+.latest_results_map_state:hover {
+    fill-opacity: 0.5;
+}
+
+/* Data */
+
+#latest_results_data_container {
+    width: 30%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 5px;
+    margin: 5px;
+
+    background-color: #EEEEEE;
+    border-radius: 15px;
+}
+
+#latest_results_data_country {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 40px;
+    margin-top: 5px;
+
+    opacity: 0;
+}
+
+#latest_results_data_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+#click_to_show {
+    position: relative;
+    left: 5px;
+    top: 40%;
+    width: 200px;
+    
+    text-align: center;
+
+    font-family: 'Roboto', sans-serif;
+
+    background-color: #DDDDDD;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 10px 20px 10px;
+}
+
+#latest_results_data_container .results {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: left;
+    opacity: 0;
+}
+
+#latest_results_data_container .results :nth-child(1) {
+    color: red
+}
+
+#latest_results_data_container .results :nth-child(2) {
+    color: blue
+}
+
+#latest_results_data_container .results :nth-child(3) {
+    color: black
+}
+
+/* Piechart */
+
+#latest_result_data_piechart {
+    width: 90%;
+    aspect-ratio: 1;
+    
+    opacity: 0;
+    padding-left: 40px;
+}

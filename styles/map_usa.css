@@ -1,0 +1,20 @@
+#map_usa {
+    width: 100%;
+    aspect-ratio: 16/9;
+
+    background-color: lightblue;
+    border-radius: 15px;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.map_usa_state {
+    fill: none;
+    stroke: #a9a9a9;
+    stroke-width: 1;
+}
+
+.map_usa_state:hover {
+    fill-opacity: 0.5;
+}
