@@ -14,6 +14,10 @@ function setup_CandidatesPopularityLinechart() {
     let svg;
     let width = 0, height = 0;
 
+    /*
+    For the setup of linechart, official material from the course were used
+    Chapter 2.3.5. Line Charts
+    */
     function setupCandidatePopularityLinechart() {
         const maxPopularity = Math.max(
             Math.max(...Object.keys(demo_popularity).map(key => parseInt(demo_popularity[key]))),
@@ -89,13 +93,14 @@ function setup_CandidatesPopularityLinechart() {
             .text("Republicans")
 
         svg.append("text")
-            .attr("x", width - LEGEND_WIDTH + SQUARE_SIZE +2)
+            .attr("x", width - LEGEND_WIDTH + SQUARE_SIZE + 2)
             .attr("y", height - LEGEND_HEIGHT + SQUARE_SIZE * 1.95)
             .attr("font-family", "Roboto, sans-serif")
             .attr("font-weight", "400")
             .text("Democrats")
     }
 
+    // Before continuing with the SVG part, all CSVs have to be loaded.
     for (let year = FIRST_YEAR; year <= LAST_YEAR; year += 4) {
         elections_years.push(year)
 

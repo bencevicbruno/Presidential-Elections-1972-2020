@@ -1,4 +1,5 @@
 function setup_VotesPerStateBlockchart() {
+    // Barchart materials: Official materials from Merlin: Chapter 2.3.4. Barcharts
     const FIRST_YEAR = 1972, LAST_YEAR = 2020
     const NUMBER_OF_ELECTIONS = (LAST_YEAR - FIRST_YEAR) / 4 + 1
 

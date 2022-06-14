@@ -1,4 +1,5 @@
 function setup_MapUSA() {
+    // For all of the code below, http://bl.ocks.org/michellechandra/0b2ce4923dc9b5809922 was referenced a lot.
     const ID_MAP_USA_TOOLTIP = "#map_usa_tooltip"
 
     function createTooltip(stateID, stateName) {
